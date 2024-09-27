@@ -144,7 +144,7 @@ function showPreloader(tmp, parent) {
 function removePreloader(parent, preloaderSelector) {
   const preloader = parent.querySelector(preloaderSelector);
   if (preloader) {
-    preloader.remove();
+    //preloader.remove();
   }
 
   console.log('убрал прелоадер');
