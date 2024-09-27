@@ -127,6 +127,16 @@ async function waitForReadyVideo(video) {
 function showPreloader(tmp, parent) {
   const node = tmp.content.cloneNode(true);
   parent.append(node);
+
+  /** сначала вычисляем ширину node по классу .preloader из шаблона, а потом записываем ширину нода в консоль */
+  let nodeWidth = document.querySelector('.preloader').offsetWidth || 0;
+  console.log(nodeWidth);
+
+  /** сначала вычисляем высоту node по классу .preloader из шаблона, а потом записываем высоту нода в консоль */
+  let nodeHeight = document.querySelector('.preloader').offsetHeight || 0;
+  console.log(nodeHeight);
+
+  console.log(node);
   console.log('показал прелоадер');
 }
 
