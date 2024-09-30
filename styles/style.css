@@ -65,6 +65,8 @@ label,
     justify-content: space-between;
     align-items: flex-end;
     align-content: center;
+    height: 54px;
+    padding: 0;
 }
 
 .content__list {
@@ -147,10 +149,6 @@ label,
     margin-bottom: 30px;
 }
 
-.search-form__fieldset-title {
-  color: rgba(255, 255, 255);
-}
-
 .content__video-card {
     display: flex;
     flex-direction: row;
@@ -223,22 +221,30 @@ label,
     overflow: hidden;
 }
 
+.search-form__fieldset {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  margin: 0;
+  font-family: 'Fira Sans Condensed', sans-serif; 
+  font-size: 18px;                               
+  font-weight: 400;                              
+  line-height: 21.6px;                            
+  text-align: left;      
+}
+
 .search-form__fieldset h2 {
-    font-family: 'Fira Sans Condensed', sans-serif;
-    color: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
    font-size: 18px;
    font-weight: 400;
-   line-height: 21.6px;
-    text-align: left;
-    font-style: normal;
+   font-style: normal;
+   line-height: 2rem;
     background-color: transparent;
     border-left: none;
     border-right: none;
-    border-color: #fff;
-    outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    border-color: #fff;    
 }
 
 .search-form__textfield {
@@ -272,23 +278,16 @@ label,
     outline-offset: -1px;
 }
 
-.search-form__fieldset {
-    border: none;
-    outline: none;
-    flex-grow: 1;
-    margin: 0;
-    font-family: 'Fira Sans Condensed', sans-serif; 
-    font-size: 18px;                               
-    font-weight: 400;                              
-    line-height: 21.6px;                            
-    text-align: left;      
-}
-
 .search-form__checkbox-list {
     display: flex;
     gap: 15px;
 }
 
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
 .search-form__label-text {
     color: inherit;
@@ -314,6 +313,7 @@ label,
     border: 1px solid white;
     background-color: transparent;
     position: relative;
+    flex-shrink: 0;
 }
 
 
