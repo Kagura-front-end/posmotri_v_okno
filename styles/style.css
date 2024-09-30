@@ -9,7 +9,8 @@ html {
 }
 
 .page {
-    position: relative;
+    display: flex;
+    justify-content: center;
     inline-size: 1200px;
     block-size: 100%;
     margin: auto;
@@ -52,7 +53,6 @@ label,
     top: 133px;
     width: 1140px;
     height: 534px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -68,7 +68,8 @@ label,
 }
 
 .content__list {
-    max-height: 292px;
+    max-height: 298px;
+    width: 399px;
     overflow-y: auto;
     flex-direction: column;
     flex-grow: 1;
@@ -139,7 +140,7 @@ label,
 .result__video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: center;
 }
 
 .content__list-item:not(:last-child) {
@@ -147,7 +148,7 @@ label,
 }
 
 .search-form__fieldset-title {
-  color: rgba(255, 255, 255, 0.7)
+  color: rgba(255, 255, 255);
 }
 
 .content__video-card {
@@ -160,7 +161,7 @@ label,
 .content__video-card-thumbnail {
     width: 194px;
     height: 103px;
-    object-fit: cover;
+    object-fit: center;
 }
 
 .content__video-card-description-container {
@@ -176,7 +177,10 @@ label,
     text-align: left;
     color: white;
     text-transform: uppercase;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 192px;
     margin-bottom: 10px;
     margin-top: 2px;
 }
@@ -221,6 +225,7 @@ label,
 
 .search-form__fieldset h2 {
     font-family: 'Fira Sans Condensed', sans-serif;
+    color: inherit;
    font-size: 18px;
    font-weight: 400;
    line-height: 21.6px;
@@ -231,7 +236,6 @@ label,
     border-right: none;
     border-color: #fff;
     outline: none;
-    color: rgb(255, 255, 255, 0.7);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -248,6 +252,7 @@ label,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  color: inherit;
 }
 
 .search-form__textfield:hover {
@@ -286,7 +291,7 @@ label,
 
 
 .search-form__label-text {
-    color: rgba(255, 255, 255, 0.7);
+    color: inherit;
     font-weight: 400;
     font-size: 18px;
     line-height: normal;
@@ -364,12 +369,6 @@ label,
 
 .search-form__submit-button:active {
     background: #545050;
-}
-
-
-.cards-list-item-template {
-    display: flex;
-    flex-direction: column;
 }
 
 .more-button {
